@@ -1,0 +1,1 @@
+ALTER TABLE `preschool_admissions` ADD `assessment` text DEFAULT '{}' NOT NULL;

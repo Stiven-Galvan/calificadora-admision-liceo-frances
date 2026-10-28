@@ -1,0 +1,1 @@
+ALTER TABLE `preschool_admissions` ADD `placement` text DEFAULT '{}' NOT NULL;
