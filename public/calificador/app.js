@@ -30,7 +30,7 @@ function areaMessage(a){
 function familyExample(q){const f=FAMILY.questions[q.id-1];return `<div class="practice-example"><div class="example-label">PRACTIQUEN JUNTOS · PREGUNTA ${q.id}</div><h4>${esc(f.meaning)}</h4><p><strong>Ejercicio:</strong> ${esc(f.example)}</p><p class="try-first">Dejen que el estudiante lo intente primero y explique cómo lo pensó. Después comparen con la guía.</p><p class="example-guide"><strong>Guía para acompañarlo:</strong> ${esc(f.guide)}</p><p><strong>Para saber si avanzó:</strong> cambien los números o usen otra situación parecida. Pídanle resolverla y explicar el porqué sin mirar la guía.</p></div>`;}
 function admissionMessage(r){
  const percentage=r.overallPercentage??r.percentage;
- const status=percentage>=70?'accepted':percentage>=55?'commitment':'not-accepted';
+ const status=percentage>=70?'accepted':percentage>=40?'commitment':'not-accepted';
  const heading=status==='accepted'?'Aceptación':status==='commitment'?'Aceptación con compromiso':'Resultado del proceso de admisión';
  const opening=status==='not-accepted'
  ? `<p>De acuerdo con los resultados de la prueba, <strong>${esc(r.student)}</strong> no alcanzó el puntaje requerido para continuar con el proceso de admisión en el <strong>Liceo Francés Jean Du Plessis</strong> para el año lectivo <strong>2026</strong>.</p><p>Agradecemos la confianza depositada en nuestra institución. Esperamos que en el futuro puedan acompañarnos y formar parte de esta gran familia.</p>`
